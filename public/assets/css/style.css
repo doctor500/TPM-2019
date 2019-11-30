@@ -1,0 +1,58 @@
+
+:root{
+    --navbarHeight: 60px;
+    --navbarPadding: 10px;
+    --footerHeight: 40px;
+    --shadow: 1px 1px 23px -1px rgba(17, 17, 17, .1);
+    --productShadow: 1px 1px 13px -1px rgba(17, 17, 17, .3);
+}
+*{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+.navbar-custom{
+    height: calc(var(--navbarHeight) + (var(--navbarPadding) * 2));
+    padding: var(--navbarPadding);
+    box-shadow: var(--shadow);
+}
+.navbar-custom img{
+    height: 100%;
+}
+.navbar-item-container{
+    margin-right: 30px;
+}
+.navbar-item{
+    line-height: var(--navbarHeight);
+    margin-left: var(--navbarPadding);
+    margin-right: var(--navbarPadding);
+    cursor: pointer;
+}
+.footer-custom{
+    height: var(--footerHeight);
+    line-height: var(--footerHeight);
+    box-shadow: var(--shadow);
+}
+main{
+    --navbarAndFooterHeight: calc(var(--navbarHeight) + (var(--navbarPadding) * 2) + var(--footerHeight));
+    min-height: calc(100vh - var(--navbarAndFooterHeight));
+}
+.text-brown{
+    color: rgb(133, 75, 28);
+}
+.text-brown:hover{
+    color: rgb(133, 75, 28);
+    text-decoration: none;
+}
+.product-image{
+    width: 100px;
+    height: 100px;
+    box-shadow: var(--productShadow);
+}
+.btn-success{
+    background: rgb(133, 75, 28);
+    border-color: rgb(133, 75, 28);
+}
+.btn-success:hover{
+    background: rgb(101, 67, 24);
+    border-color: rgb(101, 67, 24);
+}
