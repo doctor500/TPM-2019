@@ -1,74 +1,119 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/doctor500/TPM-2019/master/public/assets/img/kopidalar_text_logo.png" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## Kopi Dalar - TPM Project Case Study
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repo is made for BNPM TPM learning materials, the goal in this case is to create a CRUD system using Laravel 6.x for various products sold by Kopi Dalar. This project will give a reference about:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Creating Model & Migration
+- Creating blade templates and structuring
+- Creating CRUD function (except displaying information on every single product)
+- Input validation with Error return
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Special Thanks
 
-## Learning Laravel
+In this document, I would like to thank [Agustinus Theodorus](https://github.com/agustinustheo) for helping to contribute to the Frontend of this project.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Frontend Snippet
 
-## Laravel Sponsors
+This piece of code is pure HTML that can be used as a reference to this frontend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Main Structure
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="your_url/style.css">
+    <title>Kopi Dalar</title>
+</head>
+<body>
+    <header>
+        ...
+    </header>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+    <main>
+        ...
+    </main>
 
-## Contributing
+    <footer class="footer-custom text-center bg-light">
+        ...
+    </footer>
+</body>
+</html>
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Header
+```HTML
+<nav class="navbar-custom bg-light d-flex justify-content-between">
+	<img src="your_url/kopidalar_text_logo.png">
+	<div class="d-flex navbar-item-container">
+		<a class="navbar-item text-brown" href="your_url_to_home">Home</a>
+		<a class="navbar-item text-brown" href="your_url_to_product_list">Coffee</a>
+	</div>
+</nav>
+```
 
-## Security Vulnerabilities
+- Footer
+```HTML
+<span class="text-brown">©️&nbsp;2019&nbsp;Copyright&nbsp;Kopi Dalar</span>
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Product List
+```HTML
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between mt-4 pl-3 pr-3">
+        <h5 class="d-block font-weight-bold text-brown mt-2">Coffee</h5>
+        <a class="btn btn-warning text-white d-block" href="your_url_to_add_form">Add Coffee</a>
+    </div>
+    <hr>
+    <div>
+    
+            <div class="d-flex align-items-center justify-content-between text-brown pl-3 pr-3 mt-2 mb-2">
+                <div class="d-flex align-items-center">
+                    <h4 class="font-weight-bold pl-3">Cafe Latte</h4>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="font-weight-bold mr-3">
+                        Rp. 30000
+                    </div>
+                    <div>
+                        <a class="btn btn-success text-white d-block m-1" href="your_url_to_edit_form">Edit Coffee</a>
+                    	<a class="btn btn-danger text-white d-block m-1">Delete Coffee</a>
+                    </div>
+                </div>
+            </div>
+           
+    </div>
+</div>
+```
+
+- Add Product Form
+```HTML
+<div class="container col-md-6">
+    <div class="d-flex align-items-center justify-content-between mt-4 pl-3 pr-3">
+        <h4 class="d-block font-weight-bold text-brown mt-2">Add Coffee</h4>
+    </div>
+    <hr>
+    <form action="your_url" method="POST" class="form-group"> 
+        <div class="input-group p-2">
+        <input type="text" class="form-control" placeholder="Product Name" name="product_name">
+        </div>
+        <div class="input-group p-2">
+            <input type="text" class="form-control" placeholder="Price" name="price">
+        </div>
+        <div class="p-2">
+            <button class="btn btn-warning text-white d-block" type="submit">Add Coffee</button>
+        </div>
+    </form>
+</div>
+```
 
 ## License
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Read `LICENSE` file for detailed information
